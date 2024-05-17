@@ -4,7 +4,7 @@
 #Variables
 edad=30
 estatura=1.80
-email="jamilewer4@gmail.com"
+email="Vguzmanniebla@gmail.com"
 logica=True
 caracter='@'
 

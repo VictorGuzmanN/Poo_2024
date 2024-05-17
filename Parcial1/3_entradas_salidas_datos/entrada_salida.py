@@ -1,8 +1,8 @@
 #Solicitar los datos de un alumno
 
-nombre=input("Monbre: ")
+nombre=input("Nombre: ")
 edad=input("Edad: ")
-estatura=input("estatura: ")
+estatura=input("Estatura: ")
 
 
 print(f" \t .::: Datos del Alumno :::.. \n Nombre: {nombre} \n 

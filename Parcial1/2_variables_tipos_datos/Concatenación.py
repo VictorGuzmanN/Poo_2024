@@ -1,6 +1,6 @@
 #Concatenar cadenas de caracteres con contenido de variables.
 
-nombre="Jacqueline Quezada Robles"
+nombre="Victor Ramon Guzman Niebla"
 especialidad="Area de Desarrollo de SW Multiplataforma"
 carrera="Ingeniero en Gestión y Desarrollo de Software"
 
