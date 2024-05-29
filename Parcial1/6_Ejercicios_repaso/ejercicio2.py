@@ -6,3 +6,6 @@ print("Los numeros pares del 1 al 20 son: ")
 for i in range(1, 21):
     if i % 2 == 0:
         print(i)
+
+x=5
+print("El valor de x es de {x}")
