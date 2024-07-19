@@ -1,14 +1,19 @@
-from conexionBD import *
+from conexionBd import *
+
 try:
-    micursor=conexion.cursor()
-    sql="delete from clientes where id=1"
+    micursor=conexionBd.conexion.cursor()
+    sql="delete from clientes where Id='1"
 
     micursor.execute(sql)
     conexion.commit()
 
+    resultado=micursor.fetchall()
+
+    for fila in resultado:
+        print(f"Id:{fila[0]}| Nombre:{fila[1]} | Direccion: {fila[2]}| telefono: {fila[3]}")
     
 except:
-    print(f"Ocurrio un problema con el servidor, por favor intentalo mas tarde...")
+    print("Ocurrio un error, por favor vuelva a intentar")
 else:
-
-    print(f"Registros Eliminado Correctamente")
+    print("Registro eliminado con exito")
+    
