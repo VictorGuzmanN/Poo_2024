@@ -1,22 +1,13 @@
-import mysql.connector
+import conexionBd
 
 try:
-    conexion=mysql.connector.connect(
-        host="localhost",
-        user='root',
-        password="",
-        database='bd_python'
-    )
-except:
-    print("Ocurrio un error")
-else:
-
-    #crear una tabla dentro de una bd existente
-    sql="create table clientes(id int primary key auto_increment, nombre varchar(60), direccion varchar (120), tel varchar (10))"
-
-    micursor=conexion.cursor()
+    micursor=conexionBd.conexion.cursor()
+    sql="create table clientes(id int primary key auto_increment, nombre varchar(60), direccion varchar(120), tel varchar (10))"
 
     micursor.execute(sql)
-
-    
+except:
+    print("Ocurrio un error, por favor vuelva a intentar")
+else:
     print("Se creo la tabla con exito")
+
+

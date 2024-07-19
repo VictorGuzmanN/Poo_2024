@@ -1,18 +1,17 @@
-from conexionBD import *
-try:
-    micursor=conexion.cursor()
+from conexionBd import *
 
-    sql="select nombre,direccion,tel from clientes"
+try:
+    micursor=conexionBd.conexion.cursor()
+    sql="select * from clientes"
+
     micursor.execute(sql)
+
     resultado=micursor.fetchall()
 
-    if len(resultado)>0:
-        print(f"Registros de la tabla: {len(resultado)}")
-        for x in resultado:
-            print(x)
+    for fila in resultado:
+        print(f"Id:{fila[0]}| Nombre:{fila[1]} | Direccion: {fila[2]}| telefono: {fila[3]}")
+    
 except:
-    print(f"Ocurrio un problema con el servidor, por favor intentalo mas tarde...")
+    print("Ocurrio un error, por favor vuelva a intentar")
 else:
-
-    print(f"Registros consultados Correctamente")
-
+    print("Registro insertado con exito")
